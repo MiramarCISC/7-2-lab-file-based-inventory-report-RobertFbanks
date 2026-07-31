@@ -5,6 +5,8 @@
 
 using namespace std;
 
+// Forgot to add in.close() and out.close() in video, its here now.
+
 bool isValidQuantity(int quantity) {
     // Return true when quantity is 0 or greater.
     if (quantity >= 0){
@@ -58,7 +60,9 @@ int readInventoryFile(string filename, InventoryItem items[], int maxItems) {
             >> items[count].price) {
     count++;
     }
+    in.close();
     return count;
+    
 }
 
 bool writeInventoryReport(string filename, const InventoryItem items[], int count) {
@@ -81,6 +85,7 @@ bool writeInventoryReport(string filename, const InventoryItem items[], int coun
     }
     out << "Total inventory value: " // Instructions never said to add the text, was a big headache trying to figure out why my make test wasn't working.
         << calculateTotalInventoryValue(items, count);
+        out.close();
     return true;
 }
 
