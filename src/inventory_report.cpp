@@ -148,3 +148,4 @@ int findHighestValueItemIndex(const InventoryItem items[], int count) {
     // Returns -1 for null arrays or invalid counts.
     return highestIndex;
 }
+// This is perfect
