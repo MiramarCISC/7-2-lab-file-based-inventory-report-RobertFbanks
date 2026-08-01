@@ -4,7 +4,6 @@
 #include <iostream>
 
 using namespace std;
-
 // Forgot to add in.close() and out.close() in video, its here now.
 
 bool isValidQuantity(int quantity) {
@@ -20,7 +19,6 @@ bool isValidPrice(double price) {
 double calculateItemValue(const InventoryItem& item) {
     // Return quantity multiplied by price.
     // If quantity or price is invalid, return 0.0.
-    
     if (!isValidQuantity(item.quantity) || !isValidPrice(item.price)){
         return 0.0;
     }
@@ -30,7 +28,6 @@ double calculateItemValue(const InventoryItem& item) {
 }
 
 int readInventoryFile(string filename, InventoryItem items[], int maxItems) {
-    
     // Open the input file.
     // Read records in this format: sku name quantity price
     // Store valid records in the items array.
@@ -56,7 +53,6 @@ int readInventoryFile(string filename, InventoryItem items[], int maxItems) {
 }
 
 bool writeInventoryReport(string filename, const InventoryItem items[], int count) {
-   
     // Open the output file.
     // Write each item and its total value.
     // Write the total inventory value.
@@ -80,7 +76,6 @@ bool writeInventoryReport(string filename, const InventoryItem items[], int coun
 }
 
 double calculateTotalInventoryValue(const InventoryItem items[], int count) {
-   
     // Return the sum of all item values.
     // Return 0.0 for null arrays or invalid counts.
     if (items == nullptr || count <= 0) {
@@ -97,7 +92,6 @@ double calculateTotalInventoryValue(const InventoryItem items[], int count) {
 }
 
 int findItemBySku(const InventoryItem items[], int count, string sku) {
-    
     // Search for a matching SKU.
     // Return the index if found.
     // Return -1 if not found.
@@ -113,7 +107,6 @@ int findItemBySku(const InventoryItem items[], int count, string sku) {
 }
 
 int findHighestValueItemIndex(const InventoryItem items[], int count) {
-    
     // Return the index of the item with the highest item value.
     // Return -1 for null arrays or invalid counts.
     if (items == nullptr || count <= 0) {
