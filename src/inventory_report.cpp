@@ -9,22 +9,12 @@ using namespace std;
 
 bool isValidQuantity(int quantity) {
     // Return true when quantity is 0 or greater.
-    if (quantity >= 0){
-        return true;
-    }
-    else {
-        return false;
-    }
+    return quantity >= 0;
 }
 
 bool isValidPrice(double price) {
     // Return true when price is 0 or greater.
-    if (price >= 0){
-        return true;
-    }
-    else {
-        return false;
-    }
+    return price >= 0;
 }
 
 double calculateItemValue(const InventoryItem& item) {
